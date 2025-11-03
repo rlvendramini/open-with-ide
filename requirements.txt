@@ -1,0 +1,10 @@
+# Bibliotecas opcionais para a extensão Cursor Projects
+# Instale com: pip install -r requirements.txt
+
+# FuzzyWuzzy - Para busca fuzzy inteligente de projetos
+# Melhora significativamente a experiência de busca
+fuzzywuzzy>=0.18.0
+
+# python-Levenshtein - Acelera o fuzzywuzzy
+# Opcional mas altamente recomendado para melhor performance
+python-Levenshtein>=0.12.0

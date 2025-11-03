@@ -1,0 +1,40 @@
+{
+    "required_api_version": "^2.0.0",
+    "name": "Cursor Projects",
+    "description": "Open your project repositories with Cursor IDE",
+    "developer_name": "Renan Luiz Vendramini",
+    "icon": "images/icon.png",
+    "options": {
+        "query_debounce": 0.05
+    },
+    "preferences": [
+        {
+            "id": "project_paths",
+            "type": "text",
+            "name": "Project Paths",
+            "description": "Comma-separated paths to your project folders (e.g., /home/user/projects,/home/user/work)",
+            "default_value": ""
+        },
+        {
+            "id": "cursor_command",
+            "type": "text",
+            "name": "Cursor Command",
+            "description": "Path to cursor binary",
+            "default_value": "cursor"
+        },
+        {
+            "id": "keyword_cursor",
+            "type": "keyword",
+            "name": "Cursor Keyword",
+            "description": "Keyword to trigger cursor projects",
+            "default_value": "cursor"
+        },
+        {
+            "id": "keyword_code",
+            "type": "keyword",
+            "name": "Code Keyword",
+            "description": "Alternative keyword (still opens with Cursor)",
+            "default_value": "code"
+        }
+    ]
+}
