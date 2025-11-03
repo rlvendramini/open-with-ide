@@ -20,7 +20,7 @@
             "type": "text",
             "name": "Cursor Command",
             "description": "Path to cursor binary",
-            "default_value": "cursor"
+            "default_value": "/usr/bin/cursor"
         },
         {
             "id": "keyword_cursor",
