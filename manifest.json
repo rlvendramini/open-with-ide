@@ -1,7 +1,7 @@
 {
     "required_api_version": "^2.0.0",
-    "name": "Cursor Projects",
-    "description": "Open your project repositories with Cursor IDE",
+    "name": "Open With IDE",
+    "description": "Busque e abra pastas de projetos na IDE ou agente de sua preferência",
     "developer_name": "Renan Luiz Vendramini",
     "icon": "images/icon.png",
     "options": {
@@ -11,30 +11,37 @@
         {
             "id": "project_paths",
             "type": "text",
-            "name": "Project Paths",
-            "description": "Comma-separated paths to your project folders (e.g., /home/user/projects,/home/user/work)",
+            "name": "Pastas de projetos",
+            "description": "Caminhos separados por vírgula (ex.: /home/user/projects,/home/user/work)",
             "default_value": ""
         },
         {
-            "id": "cursor_command",
+            "id": "preferred_ides",
             "type": "text",
-            "name": "Cursor Command",
-            "description": "Path to cursor binary",
-            "default_value": "/usr/bin/cursor"
+            "name": "IDEs preferidas (ordem)",
+            "description": "Lista ordenada separada por vírgula. A primeira é a padrão do Enter. Ex.: cursor, zed, code",
+            "default_value": ""
         },
         {
-            "id": "keyword_cursor",
-            "type": "keyword",
-            "name": "Cursor Keyword",
-            "description": "Keyword to trigger cursor projects",
-            "default_value": "cursor"
+            "id": "custom_ides",
+            "type": "text",
+            "name": "IDEs/agentes personalizados",
+            "description": "Separe por ponto e vírgula: Nome=comando [args]. Prefixe com terminal: para agentes CLI. Ex.: MeuIDE=/opt/meuide/meuide; MeuAgente=terminal:meuagente --flag",
+            "default_value": ""
         },
         {
-            "id": "keyword_code",
+            "id": "terminal_command",
+            "type": "text",
+            "name": "Comando do terminal (agentes CLI)",
+            "description": "Opcional. Use {path} para a pasta do projeto. Ex.: gnome-terminal --working-directory={path} --. Vazio = detectar automaticamente",
+            "default_value": ""
+        },
+        {
+            "id": "keyword_projects",
             "type": "keyword",
-            "name": "Code Keyword",
-            "description": "Alternative keyword (still opens with Cursor)",
-            "default_value": "code"
+            "name": "Palavra-chave",
+            "description": "Palavra-chave para listar os projetos",
+            "default_value": "projects"
         }
     ]
 }
