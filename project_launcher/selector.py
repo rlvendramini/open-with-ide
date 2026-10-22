@@ -53,8 +53,8 @@ def build_picker_items(options: Iterable[IdeOption]) -> list[PickerItem]:
     if not has_available(options):
         items.append(
             PickerItem(
-                name="Nenhuma IDE/agente instalado",
-                description="Instale uma IDE/agente ou configure custom_ides nas preferências",
+                name="Nenhuma opção disponível",
+                description="Instale uma IDE/agente ou configure terminal/custom_ides nas preferências",
                 icon=ICON,
                 enabled=False,
             )

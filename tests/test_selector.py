@@ -36,7 +36,7 @@ class SelectorTests(unittest.TestCase):
 
     def test_blocked_item_is_locked_and_disabled(self):
         items = build_picker_items([option("code", "VS Code", available=False)])
-        self.assertEqual(items[0].name, "Nenhuma IDE/agente instalado")
+        self.assertEqual(items[0].name, "Nenhuma opção disponível")
         self.assertEqual(items[1].name, f"{LOCK_PREFIX}VS Code")
         self.assertFalse(items[1].enabled)
         self.assertIsNone(items[1].ide_id)
@@ -66,7 +66,7 @@ class SelectorTests(unittest.TestCase):
 
     def test_warning_when_nothing_available(self):
         items = build_picker_items([option("code", "VS Code", available=False)])
-        self.assertEqual(items[0].name, "Nenhuma IDE/agente instalado")
+        self.assertEqual(items[0].name, "Nenhuma opção disponível")
         self.assertFalse(items[0].enabled)
 
     def test_order_preserved(self):
